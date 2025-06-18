@@ -11,10 +11,4 @@ def info_gathering_prompt(field):
     }
     return prompts.get(field, "Please provide the requested information.")
 
-def tech_questions_prompt(tech_stack):
-    return (
-        f"You are an expert technical interviewer. "
-        f"Given a candidate with the following tech stack: {tech_stack}, "
-        "generate 3-5 interview questions for each technology to assess their proficiency. "
-        "Questions should be clear, relevant, and vary in difficulty."
-    )
+
