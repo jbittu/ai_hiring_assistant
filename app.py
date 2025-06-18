@@ -13,8 +13,8 @@ local_css("styles.css")
 
 st.markdown("<div class='title'> TalentScout Hiring Assistant</div>", unsafe_allow_html=True)
 st.markdown("""
-<p style='text-align:center; color:#22577A; font-size:1.1rem;'>
-Welcome! I'm your virtual hiring assistant. I'll guide you through a quick screening process.<br>
+<p class='titledis'>
+Welcome! I'm your virtual hiring assistant. I'll guide you through a quick screening process.
 Type <b>'exit'</b> anytime to end the conversation.
 </p>
 """, unsafe_allow_html=True)
@@ -32,7 +32,7 @@ context = st.session_state.context
 
 # Initial Greeting 
 if not st.session_state.chat_history:
-    st.session_state.chat_history.append(("assistant", "👋 Hello! I'm your virtual hiring assistant for TalentScout."))
+    st.session_state.chat_history.append(("assistant", " Hello! I'm your virtual hiring assistant for TalentScout."))
     field_index = context.current_field
     if field_index < len(context.fields):
         next_prompt = info_gathering_prompt(context.fields[field_index])
@@ -94,7 +94,7 @@ if user_input:
             next_q = st.session_state.technical_questions[st.session_state.current_question_index]
             st.session_state.chat_history.append(("assistant", f"{next_q}"))
         else:
-            st.session_state.chat_history.append(("assistant", "✅ Thank you! You've completed the technical interview."))
+            st.session_state.chat_history.append(("assistant", "Thank you! You've completed the technical interview."))
             st.session_state.interview_phase = "completed"
 
         st.rerun()
@@ -109,7 +109,7 @@ if st.session_state.interview_phase == "generating_questions":
             st.session_state.technical_questions = questions
             st.session_state.interview_phase = "technical_questions"
             st.session_state.current_question_index = 0
-            st.session_state.chat_history.append(("assistant", "📘 Let's start the technical interview!"))
+            st.session_state.chat_history.append(("assistant", "Let's start the technical interview!"))
             st.session_state.chat_history.append(("assistant", f"{questions[0]}"))
         else:
             st.session_state.chat_history.append(("assistant", "❗ Failed to generate technical questions."))
