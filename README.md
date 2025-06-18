@@ -29,5 +29,4 @@ A Streamlit-based intelligent chatbot for candidate screening, generativeai gemi
 - Context management
 - Prompt engineering for relevant question generation
 
-## License
-MIT
+
