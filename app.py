@@ -13,12 +13,19 @@ local_css("styles.css")
 
 st.markdown("<div class='title'> TalentScout Hiring Assistant</div>", unsafe_allow_html=True)
 st.markdown("""
-<p class='titledis'>
+<span class='titledis'>
 Welcome! I'm your virtual hiring assistant. I'll guide you through a quick screening process.
-Type <b>'exit'</b> anytime to end the conversation.
-</p>
+Type 'exit' anytime to end the conversation.
+</span>
 """, unsafe_allow_html=True)
+st.markdown("""
+<div class='privacy-notice'>
+<b>Data Privacy Notice:</b>
+Your information is stored temporarily and used solely for this hiring process.
+We do not store or share any personal data externally.
 
+</div>
+""", unsafe_allow_html=True)
 # Session State Init
 if 'context' not in st.session_state:
     st.session_state.context = ConversationContext()
@@ -94,8 +101,14 @@ if user_input:
             next_q = st.session_state.technical_questions[st.session_state.current_question_index]
             st.session_state.chat_history.append(("assistant", f"{next_q}"))
         else:
-            st.session_state.chat_history.append(("assistant", "Thank you! You've completed the technical interview."))
+            st.session_state.chat_history.append(("assistant", " Thank you! You've completed the technical interview."))
+
+            # Save candidate data
+            saved_path = context.save_candidate_data()
+            st.session_state.chat_history.append(("assistant", f" Your data has been saved securely for evaluation (simulation only)."))
             st.session_state.interview_phase = "completed"
+
+            
 
         st.rerun()
 
@@ -121,8 +134,13 @@ if st.session_state.interview_phase == "generating_questions":
 if context.conversation_ended or st.session_state.interview_phase == "completed":
     st.markdown("""
     <div class='assistant'>
-     Thank you for completing the interview!<br>
+    ✅ Thank you for completing the interview!<br>
     We’ll review your responses and contact you with next steps.<br><br>
     You can now close this window or type <b>'restart'</b> to begin again.
     </div>
     """, unsafe_allow_html=True)
+
+    # Optional: download data
+    with open(saved_path, "rb") as f:
+        st.download_button("📥 Download My Interview Summary (JSON)", f, file_name="interview_summary.json")
+

@@ -1,4 +1,7 @@
 import re
+import json
+import datetime
+import os
 from prompts import info_gathering_prompt
 
 EXIT_KEYWORDS = ["exit", "quit", "bye", "goodbye", "end", "stop"]
@@ -91,3 +94,23 @@ class ConversationContext:
 
     def set_questions(self, questions):
         self.candidate['questions'] = questions
+    
+
+    def save_candidate_data(self):
+        
+        os.makedirs("candidate_data", exist_ok=True)
+        timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"candidate_data/candidate_{timestamp}.json"
+        
+        # Save only anonymized/simulated data (you can obfuscate name/email if needed)
+        candidate_data = {
+            "timestamp": timestamp,
+            "candidate_data": self.candidate,
+        }
+        
+        with open(filename, "w") as f:
+            json.dump(candidate_data, f, indent=4)
+
+        return filename
+
+

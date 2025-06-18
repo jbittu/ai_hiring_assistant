@@ -2,6 +2,9 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f9fbfd;
     color: #797a7a;
+    width: 80%;         
+    margin: 0 auto;           
+    padding: 2rem;            
 }
 
 .title {
@@ -11,13 +14,32 @@ body {
     margin-bottom: 1rem;
     color: #d7e8f3;
 }
+
 .titledis {
     display: flex;
-    align-items: center;
     justify-content: center;
-    font-size: 1.7rem;
+    text-align: center;
+    font-size: 1.5rem;
     color: #99c4fc;
+    margin: 1.5rem auto;
+    max-width: 80%;
+    line-height: 1.6;
 }
+.privacy-notice {
+
+    justify-content: center;
+    align-items: center;
+    font-size: 0.95rem;
+    width: fit-content;
+    background-color: #bbe8fd;
+    padding: 0.3rem 0.5rem;
+    border-left: 4px solid #034a8d;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    color: #020f16;
+}
+
+
 .assistant {
     background-color: #c894eb;
     max-width: 80%;
