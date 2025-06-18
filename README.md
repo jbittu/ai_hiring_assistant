@@ -1,7 +1,7 @@
 # TalentScout Hiring Assistant Chatbot
 
 ## Overview
-A Streamlit-based intelligent chatbot for candidate screening, powered by GPT-3.5/4.
+A Streamlit-based intelligent chatbot for candidate screening, generativeai gemini-2.0-flash
 
 ## Features
 - Gathers candidate info step-by-step
@@ -19,7 +19,7 @@ A Streamlit-based intelligent chatbot for candidate screening, powered by GPT-3.
 - Type 'exit' to end conversation
 
 ## Technical Details
-- Python, Streamlit, OpenAI GPT-3.5/4
+- Python, Streamlit, generativeai gemini-2.0-flash
 - Modular code structure
 
 ## Prompt Design
