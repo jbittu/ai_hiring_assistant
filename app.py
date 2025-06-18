@@ -121,7 +121,7 @@ if st.session_state.interview_phase == "generating_questions":
 if context.conversation_ended or st.session_state.interview_phase == "completed":
     st.markdown("""
     <div class='assistant'>
-    ✅ Thank you for completing the interview!<br>
+     Thank you for completing the interview!<br>
     We’ll review your responses and contact you with next steps.<br><br>
     You can now close this window or type <b>'restart'</b> to begin again.
     </div>
