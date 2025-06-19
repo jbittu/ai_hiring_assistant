@@ -1,3 +1,4 @@
+import json
 import streamlit as st
 from context_manager import ConversationContext
 from gemini_client import generate_technical_questions
@@ -134,13 +135,27 @@ if st.session_state.interview_phase == "generating_questions":
 if context.conversation_ended or st.session_state.interview_phase == "completed":
     st.markdown("""
     <div class='assistant'>
-    ✅ Thank you for completing the interview!<br>
+     Thank you for completing the interview!<br>
     We’ll review your responses and contact you with next steps.<br><br>
     You can now close this window or type <b>'restart'</b> to begin again.
     </div>
     """, unsafe_allow_html=True)
 
-    # Optional: download data
-    with open(saved_path, "rb") as f:
-        st.download_button("📥 Download My Interview Summary (JSON)", f, file_name="interview_summary.json")
+    interview_summary = {
+        "candidate_info": context.candidate,
+        "tech_stack": context.get_tech_stack(),
+        "interview_log": [
+            {
+                "question": st.session_state.technical_questions[i],
+                "answer": st.session_state.interview_log[i].split('\nA')[1] if '\nA' in st.session_state.interview_log[i] else ""
+            }
+            for i in range(len(st.session_state.interview_log))
+        ]
+    }
 
+    saved_path = "candidate_data/interview_summary.json"
+    with open(saved_path, "w") as f:
+        json.dump(interview_summary, f, indent=2)
+
+    with open(saved_path, "rb") as f:
+        st.download_button(" Download My Interview Summary (JSON)", f, file_name="interview_summary.json")
