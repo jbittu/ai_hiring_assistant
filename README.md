@@ -36,22 +36,27 @@ TalentScout Hiring Assistant is a Streamlit-based web application designed to au
 
 1. **Clone the repository:**
    ```bash
-   git clone 
-   cd 
+   git clone https://github.com/jbittu/ai_hiring_assistant.git
+   cd  ai_hiring_assistant
    ```
+2. **Create a Virtual Environment:**
+    ```bash
+    python -m venv venv
+     venv\Scripts\activate
+     ```
 
-2. **Install dependencies:**
+3. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Set up environment variables:**
+4. **Set up environment variables:**
    - Create a `.env` file in the project root:
      ```
      GOOGLE_API_KEY=your_google_gemini_api_key
      ```
 
-4. **Run the application:**
+5. **Run the application:**
    ```bash
    streamlit run app.py
    ```
