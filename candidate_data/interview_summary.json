@@ -1,0 +1,30 @@
+{
+  "candidate_info": {
+    "name": "Bittu Jaiswal",
+    "email": "jaiswal@gmail.com",
+    "phone": "7076455854",
+    "experience": "2",
+    "position": "AI engineer",
+    "location": "Hyderabad",
+    "tech_stack": "Python"
+  },
+  "tech_stack": "Python",
+  "interview_log": [
+    {
+      "question": "1. Design a Python decorator that implements memoization for functions with arbitrary arguments (including positional, keyword, and default arguments), handling potential unhashable argument types gracefully.",
+      "answer": "1: asnwe"
+    },
+    {
+      "question": "2. Implement a Python class that efficiently finds the median of a stream of numbers as they are received, optimizing for both time and space complexity. Justify your choice of data structures.",
+      "answer": "2: wsawer"
+    },
+    {
+      "question": "3. Describe the challenges and potential solutions when implementing a highly concurrent web scraper in Python using asyncio and aiohttp, focusing on handling rate limits, avoiding deadlocks, and ensuring data integrity.",
+      "answer": "3: aswer"
+    },
+    {
+      "question": "4. Given a large CSV file (too large to fit in memory), write a Python function using generators and iterators that efficiently identifies and returns the top 'n' most frequent words across all rows, excluding a predefined set of stop words.",
+      "answer": "4: waser"
+    }
+  ]
+}

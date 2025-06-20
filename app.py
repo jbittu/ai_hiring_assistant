@@ -158,4 +158,4 @@ if context.conversation_ended or st.session_state.interview_phase == "completed"
         json.dump(interview_summary, f, indent=2)
 
     with open(saved_path, "rb") as f:
-        st.download_button(" Download My Interview Summary (JSON)", f, file_name="interview_summary.json")
+        st.download_button(" Download Interview Summary", f, file_name="interview_summary.json")
