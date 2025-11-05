@@ -6,7 +6,6 @@ from prompts import info_gathering_prompt
 
 EXIT_KEYWORDS = ["exit", "quit", "bye", "goodbye", "end", "stop"]
 
-# Validation functions
 def validate_name(name): 
     return bool(re.match(r"^[A-Za-z][A-Za-z\s'\-]{1,}[A-Za-z]$", name.strip()))
 
@@ -51,38 +50,30 @@ class ConversationContext:
         if self.current_field < len(self.fields):
             field = self.fields[self.current_field]
 
-            # Field-specific validation
+            # Validation per field
             if field == "name" and not validate_name(user_input):
                 return "❗ Invalid name. Use letters only; spaces, hyphens, and apostrophes are allowed."
-
             if field == "email" and not validate_email(user_input):
-                return "❗ Invalid email format. Please enter a valid email like example@domain.com."
-
+                return "❗ Invalid email format."
             if field == "phone" and not validate_phone(user_input):
-                return "❗ Invalid phone number. Use 10–15 digits with optional +, -, or spaces."
-
+                return "❗ Invalid phone number."
             if field == "experience" and not validate_experience(user_input):
-                return "❗ Please enter your years of experience as a number between 0 and 50."
-
+                return "❗ Please enter your experience in years (0–50)."
             if field == "position" and not validate_position(user_input):
-                return "❗ Invalid position title. Please enter a proper job title (letters, spaces, hyphens)."
-
+                return "❗ Invalid position title."
             if field == "location" and not validate_location(user_input):
-                return "❗ Invalid location. Please enter a city or region using letters only."
-
+                return "❗ Invalid location."
             if field == "tech_stack" and not validate_tech_stack(user_input):
-                return "❗ Please mention at least one technology or tool you're familiar with."
+                return "❗ Please mention at least one technology or tool."
 
             # Store validated input
             self.candidate[field] = user_input
             self.current_field += 1
 
-            # Move to next question
             if self.current_field < len(self.fields):
                 return info_gathering_prompt(self.fields[self.current_field])
             else:
                 return " Thank you! All required information has been collected."
-
         else:
             return "ℹ All information has already been collected. Type 'exit' to end the conversation."
 
@@ -92,25 +83,14 @@ class ConversationContext:
     def get_tech_stack(self):
         return self.candidate.get("tech_stack", "")
 
-    def set_questions(self, questions):
-        self.candidate['questions'] = questions
-    
-
     def save_candidate_data(self):
-        
         os.makedirs("candidate_data", exist_ok=True)
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
         filename = f"candidate_data/candidate_{timestamp}.json"
-        
-        # Save only anonymized/simulated data (you can obfuscate name/email if needed)
         candidate_data = {
             "timestamp": timestamp,
             "candidate_data": self.candidate,
         }
-        
         with open(filename, "w") as f:
             json.dump(candidate_data, f, indent=4)
-
         return filename
-
-

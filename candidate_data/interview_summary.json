@@ -1,30 +1,72 @@
 {
   "candidate_info": {
-    "name": "Bittu Jaiswal",
+    "name": "bittu",
     "email": "jaiswal@gmail.com",
-    "phone": "7076455854",
-    "experience": "2",
-    "position": "AI engineer",
-    "location": "Hyderabad",
-    "tech_stack": "Python"
+    "phone": "3214586972",
+    "experience": "1",
+    "position": "machinelearning",
+    "location": "hyd",
+    "tech_stack": "python"
   },
-  "tech_stack": "Python",
+  "tech_stack": "python",
   "interview_log": [
     {
-      "question": "1. Design a Python decorator that implements memoization for functions with arbitrary arguments (including positional, keyword, and default arguments), handling potential unhashable argument types gracefully.",
-      "answer": "1: asnwe"
+      "question": "1. Explain the difference between lists and tuples in Python. When would you choose one over the other?",
+      "answer": "ceneac'l"
     },
     {
-      "question": "2. Implement a Python class that efficiently finds the median of a stream of numbers as they are received, optimizing for both time and space complexity. Justify your choice of data structures.",
-      "answer": "2: wsawer"
+      "question": "2. Describe the purpose of decorators in Python and provide a simple example of how to create and use one.",
+      "answer": "akcabs noajcn"
     },
     {
-      "question": "3. Describe the challenges and potential solutions when implementing a highly concurrent web scraper in Python using asyncio and aiohttp, focusing on handling rate limits, avoiding deadlocks, and ensuring data integrity.",
-      "answer": "3: aswer"
+      "question": "3. How does Python's garbage collection work, and what is the role of reference counting?",
+      "answer": "jcbna;jaw"
     },
     {
-      "question": "4. Given a large CSV file (too large to fit in memory), write a Python function using generators and iterators that efficiently identifies and returns the top 'n' most frequent words across all rows, excluding a predefined set of stop words.",
-      "answer": "4: waser"
+      "question": "4. Write a function to check if a given string is a palindrome using recursion.",
+      "answer": "jnawcojab c"
+    },
+    {
+      "question": "5. Explain the concept of generators in Python and how they differ from regular functions. Provide an example of a generator function.",
+      "answer": "jbnwaqcxkiajnc "
     }
-  ]
+  ],
+  "evaluation": {
+    "results": [
+      {
+        "question": "1. Explain the difference between lists and tuples in Python. When would you choose one over the other?",
+        "answer": "ceneac'l",
+        "score": 0,
+        "feedback": "The answer is not understandable and does not address the question."
+      },
+      {
+        "question": "2. Describe the purpose of decorators in Python and provide a simple example of how to create and use one.",
+        "answer": "akcabs noajcn",
+        "score": 0,
+        "feedback": "The answer is not understandable and does not address the question."
+      },
+      {
+        "question": "3. How does Python's garbage collection work, and what is the role of reference counting?",
+        "answer": "jcbna;jaw",
+        "score": 0,
+        "feedback": "The answer is not understandable and does not address the question."
+      },
+      {
+        "question": "4. Write a function to check if a given string is a palindrome using recursion.",
+        "answer": "jnawcojab c",
+        "score": 0,
+        "feedback": "The answer is not understandable and does not address the question."
+      },
+      {
+        "question": "5. Explain the concept of generators in Python and how they differ from regular functions. Provide an example of a generator function.",
+        "answer": "jbnwaqcxkiajnc ",
+        "score": 0,
+        "feedback": "The answer is not understandable and does not address the question."
+      }
+    ],
+    "summary": {
+      "total_score": 0,
+      "average_score": 0.0
+    }
+  }
 }

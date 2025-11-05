@@ -1,4 +1,3 @@
-
 def info_gathering_prompt(field):
     prompts = {
         "name": "Please provide your full name.",
@@ -10,5 +9,3 @@ def info_gathering_prompt(field):
         "tech_stack": "Please list the programming languages, frameworks, databases, and tools you are proficient in."
     }
     return prompts.get(field, "Please provide the requested information.")
-
-
