@@ -2,66 +2,66 @@
   "candidate_info": {
     "name": "bittu",
     "email": "jaiswal@gmail.com",
-    "phone": "3214586972",
+    "phone": "9874563210",
     "experience": "1",
-    "position": "machinelearning",
+    "position": "machine learning",
     "location": "hyd",
     "tech_stack": "python"
   },
   "tech_stack": "python",
   "interview_log": [
     {
-      "question": "1. Explain the difference between lists and tuples in Python. When would you choose one over the other?",
-      "answer": "ceneac'l"
+      "question": "1. Explain the difference between lists, tuples, and sets in Python. When would you choose one over the others?",
+      "answer": "fwoicnwacq"
     },
     {
-      "question": "2. Describe the purpose of decorators in Python and provide a simple example of how to create and use one.",
-      "answer": "akcabs noajcn"
+      "question": "2. Describe the concept of decorators in Python and provide an example of how you might use one.",
+      "answer": "ciwjlnewifvubwc"
     },
     {
-      "question": "3. How does Python's garbage collection work, and what is the role of reference counting?",
-      "answer": "jcbna;jaw"
+      "question": "3. How does Python handle memory management? Explain garbage collection and how it works.",
+      "answer": "cwechuw;anc.wcu"
     },
     {
-      "question": "4. Write a function to check if a given string is a palindrome using recursion.",
-      "answer": "jnawcojab c"
+      "question": "4. Write a function that takes a list of integers and returns a new list containing only the even numbers from the original list, sorted in descending order.",
+      "answer": "jcnwo;arfvnsdlk as;"
     },
     {
-      "question": "5. Explain the concept of generators in Python and how they differ from regular functions. Provide an example of a generator function.",
-      "answer": "jbnwaqcxkiajnc "
+      "question": "5. Explain the Global Interpreter Lock (GIL) in Python and how it affects multithreading. What strategies can be used to overcome GIL limitations?",
+      "answer": "nw; ;cawoincj "
     }
   ],
   "evaluation": {
     "results": [
       {
-        "question": "1. Explain the difference between lists and tuples in Python. When would you choose one over the other?",
-        "answer": "ceneac'l",
+        "question": "1. Explain the difference between lists, tuples, and sets in Python. When would you choose one over the others?",
+        "answer": "fwoicnwacq",
         "score": 0,
-        "feedback": "The answer is not understandable and does not address the question."
+        "feedback": "The answer provided is not relevant to the question. The candidate needs to demonstrate understanding of Python data structures."
       },
       {
-        "question": "2. Describe the purpose of decorators in Python and provide a simple example of how to create and use one.",
-        "answer": "akcabs noajcn",
+        "question": "2. Describe the concept of decorators in Python and provide an example of how you might use one.",
+        "answer": "ciwjlnewifvubwc",
         "score": 0,
-        "feedback": "The answer is not understandable and does not address the question."
+        "feedback": "The answer provided is not relevant to the question. The candidate needs to explain decorators and provide a practical example."
       },
       {
-        "question": "3. How does Python's garbage collection work, and what is the role of reference counting?",
-        "answer": "jcbna;jaw",
+        "question": "3. How does Python handle memory management? Explain garbage collection and how it works.",
+        "answer": "cwechuw;anc.wcu",
         "score": 0,
-        "feedback": "The answer is not understandable and does not address the question."
+        "feedback": "The answer provided is not relevant to the question. The candidate needs to explain Python's memory management and garbage collection."
       },
       {
-        "question": "4. Write a function to check if a given string is a palindrome using recursion.",
-        "answer": "jnawcojab c",
+        "question": "4. Write a function that takes a list of integers and returns a new list containing only the even numbers from the original list, sorted in descending order.",
+        "answer": "jcnwo;arfvnsdlk as;",
         "score": 0,
-        "feedback": "The answer is not understandable and does not address the question."
+        "feedback": "The answer provided is not relevant to the question. The candidate needs to provide functional code to filter and sort a list."
       },
       {
-        "question": "5. Explain the concept of generators in Python and how they differ from regular functions. Provide an example of a generator function.",
-        "answer": "jbnwaqcxkiajnc ",
+        "question": "5. Explain the Global Interpreter Lock (GIL) in Python and how it affects multithreading. What strategies can be used to overcome GIL limitations?",
+        "answer": "nw; ;cawoincj ",
         "score": 0,
-        "feedback": "The answer is not understandable and does not address the question."
+        "feedback": "The answer provided is not relevant to the question. The candidate needs to explain the GIL and its impact on multithreading, along with strategies to mitigate its effects."
       }
     ],
     "summary": {
